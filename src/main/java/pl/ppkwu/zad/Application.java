@@ -18,6 +18,9 @@ public class Application {
 
         performFileOperations();
 
+        if(retryCallback.call()){
+            performFileOperations();
+        }
     }
 
     private static void performFileOperations() {
