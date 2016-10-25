@@ -16,5 +16,11 @@ public class Application {
 
         fileLibrary.setRetryCallback(retryCallback);
 
+        String correctMessage = IOUtils.getInput("Poprawny string");
+        String wrongMessage = IOUtils.getInput("Niepoprawny string");
+        String fileName = IOUtils.getInput("Nazwa pliku: ");
+
+        fileLibrary.writeToFile(fileName, correctMessage, wrongMessage);
+
     }
 }
